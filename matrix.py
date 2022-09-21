@@ -9,7 +9,12 @@ try:
     import bext, colorama
 except ImportError:
     print ('The bext and colorama modules are required to run the program.')
-    sys.exit ()
+    sys.exit()
+except TypeError:
+    print('i dont know,what problem (')
+    sys.exit()
+    bext.clear()
+
 
 class Drop:
     def __init__ (self):
@@ -68,6 +73,8 @@ drops = []
 for i in range (1, width*2//3):
     drop = Drop ()
     drops.append (drop)
+    
+'''end startegy'''
 
 while True:
     for drop in drops:
